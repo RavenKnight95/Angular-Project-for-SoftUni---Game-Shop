@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { MainComponent } from './main/main.component';
 import { GamesListComponent } from './games-list/games-list.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    GamesListComponent
+    GamesListComponent,
+    
   ],
   imports: [
     BrowserModule,
