@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { MainComponent } from './main/main.component';
 import { GamesListComponent } from './games-list/games-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './core/header/header.component';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     MainComponent,
     GamesListComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,
+    HeaderComponent]
 })
 export class AppModule { }
