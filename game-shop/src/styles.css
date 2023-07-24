@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    overflow-x: hidden;
+    color: white;
+    background-color: #2C353C;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button:focus {
+    outline: none;
+}
