@@ -1,1 +1,46 @@
-<p>game-list works!</p>
+<article class="game-list">
+    <h1>Library</h1>
+
+    <div class="form-filter">
+        <form #filterForm="ngForm" (ngSubmit)="filterGames(filterForm)" class="filter">
+            <label for="genre">Filter by:</label>
+            <select name="genre" id="genre" ngModel>
+                <option value="any">any</option>
+                <option value="horror">horror</option>
+                <option value="fantasy">fantasy</option>
+                <option value="romance">romance</option>
+                <option value="mistery">mistery</option>
+            </select>
+            <br><br>
+            <button class="filter-btn">Filter</button>
+        </form>
+    </div>
+</article>
+
+
+<section *ngIf="gameList" id="game-list">
+    <div *ngIf="filteredGameList?.length > 0" class="filtered game-info">
+        <app-game-list-item *ngFor="let game of Game" [game]="game"></app-game-list-item>
+    </div>
+
+    <ng-container *ngIf="filteredGameList?.length === 0">
+        <p>
+            No games for this genre!
+        </p>
+    </ng-container>
+
+    <div class="nonFiltered game-info" *ngIf="filteredGameList === undefined">
+        <app-game-list-item *ngFor="let game of gameList" [game]="game"></app-game-list-item>
+        <div *ngIf="gameList?.length === 0">
+            <article class="no-available-games">
+                <h1>Library is empty.</h1>
+                <a routerLink="/add-game">Add a game</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+<div *ngIf="!gameList">
+    Loading...
+</div>
