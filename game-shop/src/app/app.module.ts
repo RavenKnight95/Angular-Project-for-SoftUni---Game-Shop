@@ -7,11 +7,17 @@ import { CoreModule } from './core/core.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './core/header/header.component';
+import { LoginComponent } from './auth/login/login.component';
+import { ProfileComponent } from './auth/profile/profile.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    ProfileComponent,
+    RegisterComponent,
 
   ],
   imports: [

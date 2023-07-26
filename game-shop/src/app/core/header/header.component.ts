@@ -28,7 +28,6 @@ export class HeaderComponent implements OnInit {
     sessionStorage.removeItem('email');
     sessionStorage.removeItem('accessToken');
     sessionStorage.removeItem('_id');
-    this.router.navigate(['/home'])
-
+    this.router.navigate(['/home']);
   }
 }
