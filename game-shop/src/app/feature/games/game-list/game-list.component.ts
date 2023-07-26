@@ -9,7 +9,7 @@ import { IGame } from 'src/app/core/interfaces/game';
   templateUrl: './game-list.component.html',
   styleUrls: ['./game-list.component.css']
 })
-export class GameListComponent implements OnInit {
+export class GamesListComponent implements OnInit {
 
   gameList: IGame[];
   filteredGameList: IGame[];

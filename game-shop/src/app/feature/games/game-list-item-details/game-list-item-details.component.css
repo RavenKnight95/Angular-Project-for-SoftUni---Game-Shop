@@ -1,0 +1,46 @@
+.main-details {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.book-img {
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
+}
+
+.details-info {
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.edit-delete-btns {
+    background: rgb(241, 76, 68);
+    box-shadow: 0px 0px 5px 0px #9dacf7;
+    color: white;
+    margin: 30px;
+    padding: 0.5em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.canLike {
+    background-color: gray;
+}
+
+.like-buy-btn {
+    display: flex;
+}
+
+.canBuy {
+    background-color: gray;
+}
+
+.p-info {
+    color: yellow;
+}
+
+.span-info {
+    color: white;
+}

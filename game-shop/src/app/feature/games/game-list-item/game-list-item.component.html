@@ -1,1 +1,13 @@
-<p>game-list-item works!</p>
+<article class="game-list-item">
+
+    <article class="game-list-item-image">
+        <img [src]="game.img" alt="game-icon" class="game-img" />
+    </article>
+
+    <article class="game-list-item-content">
+        <h4>{{game.title}}</h4>
+    </article>
+
+    <a [routerLink]="['/library', game._id]" class="btn-details">Details</a>
+
+</article>

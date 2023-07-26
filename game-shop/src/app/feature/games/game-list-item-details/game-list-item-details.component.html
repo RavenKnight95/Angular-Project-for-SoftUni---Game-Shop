@@ -1,1 +1,64 @@
-<p>game-list-item-details works!</p>
+<section class="main-details" *ngIf="game">
+
+    <div class="details-img">
+        <img [src]="game.img" alt="" class="game-img">
+    </div>
+
+
+
+
+    <div class="details-info">
+        <h1 class="p-info">Title: <span class="span-info">{{game?.title}}</span></h1>
+        <p class="p-info">Author: <span class="span-info">{{game.author}}</span></p>
+        <p class="p-info">Genre: <span class="span-info">{{game.genre}}</span> </p>
+        <p class="p-info">Description: <span class="span-info">{{game?.description}}</span></p>
+        <p class="p-info">Price: <span class="span-info">{{game.price}}$</span> </p>
+        <p class="p-info">Likes: <span class="span-info">{{likes}}</span></p>
+
+        <ng-container *ngIf="!isOwner">
+
+            <section *ngIf="isLoggedIn" class="like-buy-btn">
+                <div class="like-functionality">
+                    <div *ngIf="isLoggedIn">
+                        <ng-container *ngIf="canLike">
+                            <button class="edit-delete-btns" (click)="likeGame()">Like</button>
+                        </ng-container>
+
+                        <ng-container *ngIf="!canLike">
+                            <button disabled [class.canLike]="!canLike" class="edit-delete-btns"
+                                (click)="likeGame()">Already liked</button>
+                        </ng-container>
+                    </div>
+                </div>
+
+                <div class="buy-functionality">
+                    <ng-container *ngIf="canBuy">
+                        <button class="edit-delete-btns del" (click)="buyGame()">Buy</button>
+                    </ng-container>
+
+                    <ng-container *ngIf="!canBuy">
+                        <button disabled [class.canBuy]="!canBuy" class="edit-delete-btns" (click)="buyGame()">Already
+                            Purchased</button>
+                    </ng-container>
+                </div>
+            </section>
+
+
+            <div *ngIf="!isLoggedIn">
+                <button class="edit-delete-btns" routerLink="/login">Like</button>
+                <button class="edit-delete-btns" routerLink="/login">Buy</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="isOwner">
+            <div class="edit-delete-btns-main">
+                <a class="edit-delete-btns" [routerLink]="['/edit', game._id]">Edit</a>
+                <a class="edit-delete-btns" (click)="deleteGame()">Delete</a>
+            </div>
+        </ng-container>
+    </div>
+</section>
+
+<section *ngIf="!game">
+    Loading...
+</section>

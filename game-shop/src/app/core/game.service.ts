@@ -52,7 +52,7 @@ export class GameService {
 
   }
 
-  buyGame(gameId: any) {
+  buyGame$(gameId: any) {
     const token = sessionStorage.getItem('accessToken');
     return this.http.get<IGame>(`${apiUrl}/data/catalog/buy/${gameId}`, { headers: new HttpHeaders({ 'X-Authorization': token }) });
 
