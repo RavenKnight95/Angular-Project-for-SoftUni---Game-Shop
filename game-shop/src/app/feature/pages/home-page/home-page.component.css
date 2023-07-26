@@ -1,0 +1,29 @@
+.home-page-content {
+    /* background-image: url('../../../../assets/books.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    padding: 10% 10% 10% 10%;
+    text-align: center;
+}
+
+.search {
+    text-align: center;
+}
+
+.search-btn {
+    background: rgb(241, 76, 68);
+    box-shadow: 0px 0px 5px 0px #9dacf7;
+    color: white;
+    width: 110px;
+}
+
+.no-book {
+    text-align: center;
+    margin-top: 5%;
+    color: yellow;
+}
+
+.found-book {
+    display: flex;
+    justify-content: center;
+}
