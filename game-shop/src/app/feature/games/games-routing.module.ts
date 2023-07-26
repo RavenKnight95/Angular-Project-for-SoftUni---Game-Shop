@@ -9,4 +9,4 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ]
 })
-export const BookRoutingModule = RouterModule.forChild(routes);
+export class GamesRoutingModule { }

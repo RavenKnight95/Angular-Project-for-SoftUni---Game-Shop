@@ -1,1 +1,106 @@
-<p>add-game works!</p>
+<section id="create-page">
+
+    <article class="create-page-container">
+        <form #addGameForm="ngForm" (ngSubmit)="submitGame(addGameForm)" class="create-page-form">
+            <h2>Add a game</h2>
+
+            <div *ngIf="errorMessage">
+                <p class="error">
+                    {{errorMessage}}
+                </p>
+            </div>
+
+
+            <label for="title">Title:</label>
+            <input #titleName="ngModel" type="text" id="title" placeholder="title" name="title" value="" ngModel
+                required minlength="4" [class.input-error]="titleName.touched && titleName.invalid" />
+
+            <ng-container *ngIf="titleName.touched && titleName.invalid">
+                <p *ngIf="titleName.errors.required" class="error">
+                    Title is required!
+                </p>
+                <p *ngIf="titleName.errors.minlength" class="error">
+                    Title must be at least 4 characters long!
+                </p>
+            </ng-container>
+
+            <label for="author">Author:</label>
+            <input #author="ngModel" type="text" id="author" placeholder="author" name="author" value="" ngModel
+                required minlength="4" maxlength="24" [class.input-error]="author.touched && author.invalid" />
+
+            <ng-container *ngIf="author.touched && author.invalid">
+                <p *ngIf="author.errors.required" class="error">
+                    Author is required!
+                </p>
+                <p *ngIf="author.errors.minlength" class="error">
+                    Author must be at least 4 characters long!
+                </p>
+            </ng-container>
+
+            <label for="img">Game image:</label>
+            <input #gameImg="ngModel" type="text" id="img" placeholder="Game image" name="img" value="" ngModel required
+                minlength="4" [class.input-error]="gameImg.touched && gameImg.invalid" />
+
+            <ng-container *ngIf="gameImg.touched && gameImg.invalid">
+                <p *ngIf="gameImg.errors.required" class="error">
+                    Game image is required!
+                </p>
+                <p *ngIf="gameImg.errors.minlength" class="error">
+                    Game image must be at least 4 characters long!
+                </p>
+            </ng-container>
+
+
+            <label for="price">Price:</label>
+            <input #price="ngModel" type="number" id="price" placeholder="price" name="price" value="" ngModel required
+                [class.input-error]="price.touched && price.invalid" />
+
+            <ng-container *ngIf="price.touched && price.invalid">
+                <p *ngIf="price.errors.required" class="error">
+                    Price is required!
+                </p>
+            </ng-container>
+
+            <label for="description" class="descLabel">Description:</label>
+            <textarea #description="ngModel" type="text" id="description" placeholder="description" name="description"
+                ngModel required minlength="10"
+                [class.input-error]="description.touched && description.invalid"> </textarea>
+
+            <ng-container *ngIf="description.touched && description.invalid">
+                <p *ngIf="description.errors.required" class="error">
+                    Description is required!
+                </p>
+                <p *ngIf="description.errors.minlength" class="error">
+                    Description must be at least 10 characters long!
+                </p>
+            </ng-container>
+
+            <label for="genre">Genre:</label>
+            <select #genre="ngModel" name="genre" id="genre" ngModel required>
+                <option value="horror">horror</option>
+                <option value="fantasy">fantasy</option>
+                <option value="romance">romance</option>
+                <option value="mistery">mistery</option>
+            </select>
+
+            <ng-container *ngIf="genre.touched && genre.invalid">
+                <p *ngIf="genre.errors.required" class="error">
+                    Genre is required!
+                </p>
+                <p *ngIf="genre.errors.minlength" class="error">
+                    Genre must be at least 4 characters long!
+                </p>
+            </ng-container>
+            
+            <article class="create-page-button">
+                <button [disabled]="addGameForm.invalid" class="btn-create">Create</button>
+            </article>
+        </form>
+
+        <article class="create-page-image">
+            <img src="https://cdn4.iconfinder.com/data/icons/gaming-27/300/gaming-fun-entertainment-freetime--game-add-512.png"
+                alt="image" />
+        </article>
+    </article>
+
+</section>
