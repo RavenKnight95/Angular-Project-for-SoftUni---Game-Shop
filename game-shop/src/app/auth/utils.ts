@@ -5,7 +5,7 @@ export function emailValidator(control: AbstractControl): ValidationErrors | nul
     const value = control.value;
 
 
-    if (!/^([a-zA-Z]+)@([a-zA-Z]+)\.([a-zA-Z]+)$/.test(value)) {
+    if (!/^([a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]+)$/.test(value)) {
         return {
             email: true
         }

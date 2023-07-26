@@ -1,6 +1,6 @@
 <section class="profile">
 
-    <h1>Welcome {{currentUser?.email}}</h1>
+    <h1>Welcome to your profile, {{currentUser?.email}}!</h1>
 
     <div *ngIf="myGameList">
         <ng-container *ngIf="myGameList.length > 0">
@@ -17,7 +17,7 @@
         <ng-container *ngIf="myGameList.length === 0">
             <div class="my-games">
                 <h1>My Games</h1>
-                <p>No games yet? Add one now <a routerLink="/add-game">Add</a></p>
+                <p>No games yet? <a routerLink="/add-game">Add</a> one now </p>
             </div>
         </ng-container>
     </div>
