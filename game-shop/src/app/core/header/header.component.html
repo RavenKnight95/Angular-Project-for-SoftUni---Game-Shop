@@ -4,13 +4,13 @@
             <div class="tm-col-left">
                 <div class="tm-site-header media">
                     <div class="media-body">
-                        <h1 class="tm-sitename text-uppercase">Games Shop</h1>
+                        <h1 class="tm-sitename text-uppercase">O-Books</h1>
                     </div>
                 </div>
             </div>
             <div class="tm-col-right">
                 <nav class="navbar navbar-expand-lg" id="tm-main-nav">
-                    <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                    <div class="collapse navbar-collapse tm-nav" id="navbar-nav" *ngIf="!isLogged">
                         <ul class="navbar-nav text-uppercase">
                             <li class="nav-item">
                                 <a class="nav-link tm-nav-link" routerLink="/home">Home</a>
@@ -26,9 +26,8 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- If user is Logged in  show these-->
 
-                    <!-- <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                    <div class="collapse navbar-collapse tm-nav" id="navbar-nav" *ngIf="isLogged">
                         <ul class="navbar-nav text-uppercase">
                             <li class="nav-item">
                                 <a class="nav-link tm-nav-link" routerLink="/home">Home</a>
@@ -40,14 +39,14 @@
                                 <a class="nav-link tm-nav-link" routerLink="/add-book">Add book</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link tm-nav-link" routerLink="/profile">'s
+                                <a class="nav-link tm-nav-link" routerLink="/profile">{{currentUser.email}}'s
                                     Profile</a>
-                            </li> -->
-                            <!-- <li class="nav-item">
-                                <a class="nav-link tm-nav-link logout">Logout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link tm-nav-link logout" (click)="logoutHandler()">Logout</a>
                             </li>
                         </ul>
                     </div>
-                </nav> -->
-            <!-- </div> -->
-        <!-- </div> -->
+                </nav>
+            </div>
+        </div>
