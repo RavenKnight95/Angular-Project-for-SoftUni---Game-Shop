@@ -22,7 +22,7 @@ export class UserService {
     return this.httpClient.post<IUser>(`${environment.apiUrl}/users/register`, userData)
   }
 
-  login$(userData: { email: string, password: string }): Observable<IUser> {
+  login$(userData: { email: string | any, password: string | any }): Observable<IUser> {
     return this.httpClient.post<IUser>(`${environment.apiUrl}/users/login`, userData)
       .pipe(tap(user => {
         sessionStorage.setItem('email', user.email);

@@ -1,6 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
+import { UserService } from './user.service';
+import { GameService } from './game.service';
 
 
 
@@ -13,8 +15,18 @@ import { HeaderComponent } from './header/header.component';
   ],
   exports: [
     HeaderComponent,
-    
-    
+
+
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+  static forRoot(): ModuleWithProviders<CoreModule> {
+    return {
+      ngModule: CoreModule,
+      providers: [
+        UserService,
+        GameService
+      ]
+    }
+  }
+}

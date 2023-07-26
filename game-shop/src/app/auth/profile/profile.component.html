@@ -1,1 +1,46 @@
-<p>profile works!</p>
+<section class="profile">
+
+    <h1>Welcome {{currentUser?.email}}</h1>
+
+    <div *ngIf="myGameList">
+        <ng-container *ngIf="myGameList.length > 0">
+            <div class="my-games">
+                <h1>My games</h1>
+                <article class="game-list">
+                    <div class="games">
+                        <app-game-list-item *ngFor="let game of myGameList" [game]="game"></app-game-list-item>
+                    </div>
+                </article>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="myGameList.length === 0">
+            <div class="my-games">
+                <h1>My Games</h1>
+                <p>No games yet? Add one now <a routerLink="/add-game">Add</a></p>
+            </div>
+        </ng-container>
+    </div>
+
+    <div *ngIf="boughtGames" class="bought-games-main">
+        <ng-container *ngIf="boughtGames.length > 0">
+            <div class="bought-games">
+                <h1>Bought Games</h1>
+                <article class="game-list">
+                    <div class="game">
+                        <app-game-list-item *ngFor="let game of boughtGames" [game]="game"></app-game-list-item>
+                    </div>
+                </article>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="boughtGames.length === 0">
+            <div class="bought-games">
+                <h1>Bought Games</h1>
+                <p>No purchased games</p>
+            </div>
+        </ng-container>
+    </div>
+
+
+</section>

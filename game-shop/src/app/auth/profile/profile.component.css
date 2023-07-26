@@ -1,0 +1,20 @@
+.profile {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.my-books {
+    margin-top: 5%;
+}
+
+.books {
+    float: left;
+}
+
+.bought-games-main {
+    margin-top: 3%;
+}
+
+.book-list {
+    display: flex;
+}
