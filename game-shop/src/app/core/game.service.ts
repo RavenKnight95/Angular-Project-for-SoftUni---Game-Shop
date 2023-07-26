@@ -42,33 +42,20 @@ export class GameService {
 
   removeGame$(gameId: any) {
     const token = sessionStorage.getItem('accessToken');
-    if (token) {
-      return this.http.delete(`${apiUrl}/data/catalog/${gameId}`, { headers: new HttpHeaders({ 'X-Authorization': token }) });
-    } else {
-      return ''
-    }
+    return this.http.delete(`${apiUrl}/data/catalog/${gameId}`, { headers: new HttpHeaders({ 'X-Authorization': token }) });
 
   }
 
   likeGame$(gameId: any) {
     const token = sessionStorage.getItem('accessToken');
-
-    if (token) {
-      return this.http.get<IGame>(`${apiUrl}/data/catalog/like/${gameId}`, { headers: new HttpHeaders({ 'X-Authorization': token }) });
-    } else {
-      return ''
-    }
+    return this.http.get<IGame>(`${apiUrl}/data/catalog/like/${gameId}`, { headers: new HttpHeaders({ 'X-Authorization': token }) });
 
   }
 
   buyGame(gameId: any) {
     const token = sessionStorage.getItem('accessToken');
+    return this.http.get<IGame>(`${apiUrl}/data/catalog/buy/${gameId}`, { headers: new HttpHeaders({ 'X-Authorization': token }) });
 
-    if (token) {
-      return this.http.get<IGame>(`${apiUrl}/data/catalog/buy/${gameId}`, { headers: new HttpHeaders({ 'X-Authorization': token }) });
-    } else {
-      return ''
-    }
 
   }
 }
