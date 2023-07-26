@@ -1,15 +1,15 @@
-.book-list {
+.game-list {
     margin-top: 5%;
     margin-bottom: 5%;
     text-align: center;
 }
 
 
-#book-list {
+#game-list {
     text-align: center;
 }
 
-.book-info {
+.game-info {
     float: left;
 }
 
@@ -21,6 +21,6 @@
     padding: 5px 15px 5px 15px;
 }
 
-.no-available-books {
+.no-available-games {
     text-align: center;
 }

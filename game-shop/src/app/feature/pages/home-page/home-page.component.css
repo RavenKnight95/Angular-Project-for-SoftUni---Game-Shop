@@ -1,5 +1,5 @@
 .home-page-content {
-    /* background-image: url('../../../../assets/books.jpg');
+    /* background-image: url('../../../../assets/games.jpg');
     background-repeat: no-repeat;
     background-size: cover; */
     padding: 10% 10% 10% 10%;
@@ -17,13 +17,13 @@
     width: 110px;
 }
 
-.no-book {
+.no-game {
     text-align: center;
     margin-top: 5%;
     color: yellow;
 }
 
-.found-book {
+.found-game {
     display: flex;
     justify-content: center;
 }

@@ -3,11 +3,11 @@
     text-align: center;
 }
 
-.my-books {
+.my-games {
     margin-top: 5%;
 }
 
-.books {
+.games {
     float: left;
 }
 
@@ -15,6 +15,6 @@
     margin-top: 3%;
 }
 
-.book-list {
+.game-list {
     display: flex;
 }

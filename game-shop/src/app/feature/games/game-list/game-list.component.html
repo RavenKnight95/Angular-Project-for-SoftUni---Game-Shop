@@ -20,7 +20,7 @@
 
 <section *ngIf="gameList" id="game-list">
     <div *ngIf="filteredGameList?.length > 0" class="filtered game-info">
-        <app-game-list-item *ngFor="let game of Game" [game]="game"></app-game-list-item>
+        <app-game-list-item *ngFor="let game of filteredGameList" [game]="game"></app-game-list-item>
     </div>
 
     <ng-container *ngIf="filteredGameList?.length === 0">

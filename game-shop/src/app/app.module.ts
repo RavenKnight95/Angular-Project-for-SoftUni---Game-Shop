@@ -7,19 +7,15 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
 import { HeaderComponent } from './core/header/header.component';
-import { GameListItemDetailsComponent } from './feature/games/game-list-item-details/game-list-item-details.component';
-import { GameListComponent } from './feature/games/game-list/game-list.component';
-import { EditGameComponent } from './feature/games/edit-game/edit-game.component';
-import { HomePageComponent } from './feature/pages/home-page/home-page.component';
+import { SharedModule } from './shared/shared.module';
+import { PagesModule } from './feature/pages/pages.module';
+import { GamesModule } from './feature/games/games.module';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameListItemDetailsComponent,
-    GameListComponent,
-    EditGameComponent,
-    HomePageComponent,
 
   ],
   imports: [
@@ -28,6 +24,9 @@ import { HomePageComponent } from './feature/pages/home-page/home-page.component
     CoreModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+    SharedModule,
+    PagesModule,
+    GamesModule,
     AuthModule,
 
   ],

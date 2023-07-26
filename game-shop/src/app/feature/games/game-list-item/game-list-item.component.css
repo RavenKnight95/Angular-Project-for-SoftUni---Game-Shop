@@ -1,4 +1,4 @@
-.book-list-item {
+.game-list-item {
     /* border: solid gray 2px;
     border-radius: 4px; */
     padding: 0.5em;
@@ -11,12 +11,12 @@
     word-wrap: break-word;
 }
 
-.book-list-item-content {
+.game-list-item-content {
     font-size: 21px;
     padding: 1em;
 }
 
-.book-list-item-details-btn {
+.game-list-item-details-btn {
     padding-top: 20px;
 }
 
@@ -30,7 +30,7 @@
     font-weight: bold;
 }
 
-.book-img {
+.game-img {
     height: 250px;
     width: 150px;
     object-fit: contain;

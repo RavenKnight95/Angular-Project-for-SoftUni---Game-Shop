@@ -18,7 +18,6 @@ import { RouterModule } from '@angular/router';
     GamesModule,
     FormsModule,
     RouterModule,
-
   ]
 })
 export class PagesModule { }

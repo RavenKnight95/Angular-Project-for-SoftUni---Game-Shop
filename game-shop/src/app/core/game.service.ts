@@ -16,7 +16,7 @@ export class GameService {
   }
 
   //body type is any <- fix if problem occurs
-  addGame$(body: any): Observable<IGame> {
+  addGame$(body): Observable<IGame> {
     const token = sessionStorage.getItem('accessToken');
 
     if (token) {
@@ -26,11 +26,11 @@ export class GameService {
     }
   }
 
-  loadGameById$(gameId: any): Observable<IGame> {
+  loadGameById$(gameId): Observable<IGame> {
     return this.http.get<IGame>(`${apiUrl}/data/catalog/${gameId}`)
   }
 
-  editGameById$(gameId: any, body: any): Observable<IGame> {
+  editGameById$(gameId, body): Observable<IGame> {
     const token = sessionStorage.getItem('accessToken');
 
     if (token) {
@@ -40,19 +40,19 @@ export class GameService {
     }
   }
 
-  removeGame$(gameId: any) {
+  removeGame$(gameId) {
     const token = sessionStorage.getItem('accessToken');
     return this.http.delete(`${apiUrl}/data/catalog/${gameId}`, { headers: new HttpHeaders({ 'X-Authorization': token }) });
 
   }
 
-  likeGame$(gameId: any) {
+  likeGame$(gameId) {
     const token = sessionStorage.getItem('accessToken');
     return this.http.get<IGame>(`${apiUrl}/data/catalog/like/${gameId}`, { headers: new HttpHeaders({ 'X-Authorization': token }) });
 
   }
 
-  buyGame$(gameId: any) {
+  buyGame$(gameId) {
     const token = sessionStorage.getItem('accessToken');
     return this.http.get<IGame>(`${apiUrl}/data/catalog/buy/${gameId}`, { headers: new HttpHeaders({ 'X-Authorization': token }) });
 
