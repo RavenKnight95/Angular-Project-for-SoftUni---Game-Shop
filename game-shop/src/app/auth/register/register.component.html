@@ -16,7 +16,7 @@
             <ng-container
                 *ngIf="registerFormGroup.controls['email'].touched && registerFormGroup.controls['email'].invalid">
                 <p *ngIf="registerFormGroup.controls['email'].errors.required" class="error">
-                    Emails is required!
+                    Email is required!
                 </p>
 
                 <p *ngIf="!registerFormGroup.controls['email'].errors.required && registerFormGroup.controls['email'].errors.email"

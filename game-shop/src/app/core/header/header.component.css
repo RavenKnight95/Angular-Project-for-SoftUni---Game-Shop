@@ -49,6 +49,7 @@
 .pt-4 {
     display: flex;
     justify-content: space-around;
+    color: #9CC;
 }
 
 .logout:hover {
