@@ -1,1 +1,72 @@
-<p>register works!</p>
+<div class="register-form" [formGroup]="registerFormGroup" (ngSubmit)="registerHandler()">
+    <form>
+        <div class="container">
+            <h1 class="title">Register</h1>
+
+            <div *ngIf="errorMessage">
+                <p class="error">
+                    {{errorMessage}}
+                </p>
+            </div>
+
+            <label for="email"><b>Email</b></label>
+            <input formControlName="email" type="text" placeholder="Enter Email" name="email" id="email"
+                [class.input-error]="registerFormGroup.controls['email'].touched && registerFormGroup.controls['email'].invalid">
+
+            <ng-container
+                *ngIf="registerFormGroup.controls['email'].touched && registerFormGroup.controls['email'].invalid">
+                <p *ngIf="registerFormGroup.controls['email'].errors.required" class="error">
+                    Emails is required!
+                </p>
+
+                <p *ngIf="!registerFormGroup.controls['email'].errors.required && registerFormGroup.controls['email'].errors.email"
+                    class="error">
+                    Must be a valid email!
+                </p>
+            </ng-container>
+
+            <div formGroupName="passwords">
+
+                <label for="psw"><b>Password</b></label>
+                <input formControlName="password" type="password" placeholder="Enter Password" name="password"
+                    id="password"
+                    [class.input-error]="passwordsGroup.controls['password'].touched && passwordsGroup.controls['password'].invalid">
+
+
+                <ng-container
+                    *ngIf="passwordsGroup.controls['password'].touched && passwordsGroup.controls['password'].invalid">
+
+                    <p *ngIf="passwordsGroup.controls['password'].errors.required" class="error">
+                        Password is required!
+                    </p>
+
+                    <p *ngIf="passwordsGroup.controls['password'].errors.minlength" class="error">
+                        Password must be at least 3 characters long!
+                    </p>
+                </ng-container>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input formControlName="repass" type="password" placeholder="Repeat Password" name="repass" id="repass"
+                    [class.input-error]="passwordsGroup.controls['repass'].touched && passwordsGroup.controls['repass'].invalid">
+
+                <ng-container
+                    *ngIf="passwordsGroup.controls['repass'].touched && passwordsGroup.controls['repass'].invalid">
+
+                    <p *ngIf="passwordsGroup.controls['repass'].errors.passwordMissmatch" class="error">
+                        Passwords do not match!
+                    </p>
+
+                </ng-container>
+            </div>
+
+            <ng-container *ngIf="!validRepass">
+                <p class="error">
+                    Passwords do not match!
+                </p>
+            </ng-container>
+
+            <button [disabled]="registerFormGroup.invalid" class="registerbtn">Register</button>
+        </div>
+        <p>Already have an account? <a routerLink="/login">Sign in</a>.</p>
+    </form>
+</div>
