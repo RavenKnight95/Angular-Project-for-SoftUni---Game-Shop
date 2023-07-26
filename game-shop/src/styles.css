@@ -28,5 +28,5 @@ button:focus {
 .pt-4 {
     display: flex;
     justify-content: space-around;
-    color: #9CC;
+    color: rgb(255, 0, 0);
 }
