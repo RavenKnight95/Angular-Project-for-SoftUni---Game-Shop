@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { MainComponent } from './main/main.component';
-import { GamesListComponent } from './games-list/games-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './core/header/header.component';
 
@@ -14,7 +13,6 @@ import { HeaderComponent } from './core/header/header.component';
   declarations: [
     AppComponent,
     MainComponent,
-    GamesListComponent,
 
   ],
   imports: [
@@ -22,6 +20,7 @@ import { HeaderComponent } from './core/header/header.component';
     AppRoutingModule,
     CoreModule,
     HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent,
