@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.development';
-import { IGame } from './interfaces/game';
+import { IGame } from './core/interfaces/game';
 
 const apiUrl = environment.apiUrl;
 

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { MainComponent } from './main/main.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './core/header/header.component';
 
@@ -12,7 +12,6 @@ import { HeaderComponent } from './core/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
 
   ],
   imports: [
