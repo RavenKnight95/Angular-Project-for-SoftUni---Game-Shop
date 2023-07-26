@@ -28,8 +28,10 @@ export class LoginComponent implements OnInit {
   }
 
   loginHandler(): void {
+    //questionable
+    const toLogin: any = this.loginFormGroup.value
     this.errorMessage = '';
-    this.userService.login$(this.loginFormGroup.value).subscribe({
+    this.userService.login$(toLogin).subscribe({
       next: user => {
         this.router.navigate(['/home']);
       }, error: (err) => {
