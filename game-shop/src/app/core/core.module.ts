@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { UserService } from './user.service';
 import { GameService } from './game.service';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,11 +12,11 @@ import { GameService } from './game.service';
     HeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
-
 
   ]
 })
