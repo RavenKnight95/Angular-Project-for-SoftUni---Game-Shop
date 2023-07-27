@@ -5,11 +5,12 @@ body {
     font-weight: 300;
     overflow-x: hidden;
     color: white;
-    background-color: #055390;
+    background-color: #01172c;
 }
 
 a {
     text-decoration: none;
+    color: rgba(227, 3, 3, 0.881)
 }
 
 ul {
@@ -29,4 +30,35 @@ button:focus {
     display: flex;
     justify-content: space-around;
     color: rgb(255, 0, 0);
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).webp");
+    /* Half height */
+    height: 50%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("https://wallup.net/wp-content/uploads/2016/01/264048-Bloodborne-video_games.jpg");
+    /* Half height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

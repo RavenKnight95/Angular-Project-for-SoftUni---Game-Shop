@@ -131,3 +131,11 @@
     object-fit: contain !important;
     object-position: center !important;
 }
+
+.add-game>h2 {
+    background: rgb(241, 76, 68);
+    box-shadow: 0px 0px 5px 0px #9dacf7;
+    color: white;
+    border-radius: 8px;
+    padding: 5px 15px 5px 15px;
+}

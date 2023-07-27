@@ -2,7 +2,7 @@
 
     <article class="create-page-container">
         <form #addGameForm="ngForm" (ngSubmit)="submitGame(addGameForm)" class="create-page-form">
-            <h2>Add a game</h2>
+            <h2 class="add-game">Add a game</h2>
 
             <div *ngIf="errorMessage">
                 <p class="error">

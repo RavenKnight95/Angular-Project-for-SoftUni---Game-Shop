@@ -49,9 +49,10 @@
 .pt-4 {
     display: flex;
     justify-content: space-around;
-    color: rgb(108, 223, 0);
+    color: rgb(254, 131, 135);
 }
 
 .logout:hover {
     cursor: pointer;
 }
+
