@@ -8,8 +8,8 @@
 .create-page-container,
 .edit-page-container {
     background-color: #fff;
-    width: 1000px;
-    height: 929px;
+    width: 850px;
+    height: 700px;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,7 +17,7 @@
     line-height: 1.5;
     left: 30%;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
-    background-color: #2C353C;
+    background-image: url("https://i.pinimg.com/originals/9f/e3/fe/9fe3fe8bcc9f22117d9644ba30a9e26f.jpg")
 }
 
 .create-page-container>.create-page-image>img,
