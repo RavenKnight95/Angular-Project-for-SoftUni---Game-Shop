@@ -43,10 +43,12 @@ export class GameListItemDetailsComponent implements OnInit {
   deleteGame() {
     this.activatedRoute.params.subscribe(params => {
       const gameId = params['gameId'];
-      this.gameService.removeGame$(gameId).subscribe(result => {
-        console.log(result)
-        this.router.navigate(['/library']);
-      });
+      if (window.confirm('Are you sure you want to delete this game?')) {
+        this.gameService.removeGame$(gameId).subscribe(result => {
+          console.log(result)
+          this.router.navigate(['/library']);
+        });
+      }
     });
   }
 
@@ -95,5 +97,5 @@ export class GameListItemDetailsComponent implements OnInit {
       })
     })
   }
-  
+
 }
