@@ -19,15 +19,16 @@ export class EditGameComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    
+    
   }
 
   submitGame(editGameForm: NgForm): void {
-    console.log(editGameForm.value)
     this.activatedRoute.params.subscribe(params => {
       const gameId = params['gameId'];
       this.gameService.editGameById$(gameId, editGameForm.value).subscribe({
         next: (game) => {
-          console.log(game);
+          console.log(editGameForm.value)
           this.router.navigate(['/library']);
         },
         error: (err) => {
