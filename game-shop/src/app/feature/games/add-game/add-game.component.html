@@ -12,7 +12,7 @@
 
 
             <label for="title">Title:</label>
-            <input #titleName="ngModel" type="text" id="title" placeholder="title" name="title" value="" ngModel
+            <input #titleName="ngModel" type="text" id="title" placeholder="Title" name="title" value="" ngModel
                 required minlength="4" [class.input-error]="titleName.touched && titleName.invalid" />
 
             <ng-container *ngIf="titleName.touched && titleName.invalid">
@@ -25,7 +25,7 @@
             </ng-container>
 
             <label for="author">Author:</label>
-            <input #author="ngModel" type="text" id="author" placeholder="author" name="author" value="" ngModel
+            <input #author="ngModel" type="text" id="author" placeholder="Author" name="author" value="" ngModel
                 required minlength="4" maxlength="24" [class.input-error]="author.touched && author.invalid" />
 
             <ng-container *ngIf="author.touched && author.invalid">
@@ -52,7 +52,7 @@
 
 
             <label for="price">Price:</label>
-            <input #price="ngModel" type="number" id="price" placeholder="price" name="price" value="" ngModel required
+            <input #price="ngModel" type="number" id="price" placeholder="Price" name="price" value="" ngModel required
                 [class.input-error]="price.touched && price.invalid" />
 
             <ng-container *ngIf="price.touched && price.invalid">
@@ -62,7 +62,7 @@
             </ng-container>
 
             <label for="description" class="descLabel">Description:</label>
-            <textarea #description="ngModel" type="text" id="description" placeholder="description" name="description"
+            <textarea #description="ngModel" type="text" id="description" placeholder="Description" name="description"
                 ngModel required minlength="10"
                 [class.input-error]="description.touched && description.invalid"> </textarea>
 

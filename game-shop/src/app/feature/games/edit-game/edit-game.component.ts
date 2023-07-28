@@ -27,7 +27,7 @@ export class EditGameComponent implements OnInit {
       const gameId = params['gameId'];
       this.gameService.loadGameById$(gameId).subscribe(game => {
         this.game = game;
-        console.log(game);
+        
         
         
       })
