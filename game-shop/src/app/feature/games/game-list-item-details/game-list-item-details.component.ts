@@ -32,6 +32,7 @@ export class GameListItemDetailsComponent implements OnInit {
       const gameId = params['gameId'];
       this.gameService.loadGameById$(gameId).subscribe(game => {
         this.game = game;
+        
         this.likes = this.game.likes.length;
 
         if (this.game.owner === this.currentUser?._id) {

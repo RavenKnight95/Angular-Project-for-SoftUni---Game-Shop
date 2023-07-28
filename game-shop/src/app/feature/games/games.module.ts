@@ -4,7 +4,7 @@ import { GamesListComponent } from './game-list/game-list.component';
 import { GameListItemComponent } from './game-list-item/game-list-item.component';
 import { AddGameComponent } from './add-game/add-game.component';
 import { GameListItemDetailsComponent } from './game-list-item-details/game-list-item-details.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditGameComponent } from './edit-game/edit-game.component';
 import { GameRoutingModule } from './games-routing.module';
 
@@ -17,14 +17,18 @@ import { GameRoutingModule } from './games-routing.module';
     AddGameComponent,
     GameListItemDetailsComponent,
     EditGameComponent,
+    
+
   ],
   imports: [
     CommonModule,
     GameRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
-    GameListItemComponent
+    GameListItemComponent,
+    ReactiveFormsModule,
   ]
 })
 export class GamesModule { }

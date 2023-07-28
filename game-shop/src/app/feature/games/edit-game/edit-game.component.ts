@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameService } from 'src/app/core/game.service';
+import { IGame } from 'src/app/core/interfaces/game';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-game',
@@ -11,14 +13,25 @@ import { GameService } from 'src/app/core/game.service';
 export class EditGameComponent implements OnInit {
 
   errorMessage: string;
+  game: IGame;
 
   constructor(
     private gameService: GameService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(params => {
+      const gameId = params['gameId'];
+      this.gameService.loadGameById$(gameId).subscribe(game => {
+        this.game = game;
+        console.log(game);
+        
+        
+      })
+    });
   }
 
   submitGame(editGameForm: NgForm): void {
