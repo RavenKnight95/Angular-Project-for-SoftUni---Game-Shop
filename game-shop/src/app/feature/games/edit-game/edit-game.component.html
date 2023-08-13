@@ -12,7 +12,7 @@
 
 
             <label for="title">Title:</label>
-            <input #titleName="ngModel" type="text" id="title" placeholder="title" name="title" value="" ngModel
+            <input #titleName="ngModel" type="text" id="title" placeholder="title" name="title" value={{game?.title}} ngModel
                 required minlength="4" [class.input-error]="titleName.touched && titleName.invalid" />
 
             <ng-container *ngIf="titleName.touched && titleName.invalid">
