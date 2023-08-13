@@ -17,7 +17,7 @@ export class UserService {
   get isLogged() {
     return !!this.currentUser;
   }
-
+  //observables
   register$(userData: { email: string, password: string }): Observable<IUser> {
     return this.httpClient.post<IUser>(`${environment.apiUrl}/users/register`, userData)
   }
