@@ -10,6 +10,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { SharedModule } from './shared/shared.module';
 import { PagesModule } from './feature/pages/pages.module';
 import { GamesModule } from './feature/games/games.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -28,6 +29,7 @@ import { GamesModule } from './feature/games/games.module';
     PagesModule,
     GamesModule,
     AuthModule,
+    ReactiveFormsModule,
 
   ],
   providers: [],
