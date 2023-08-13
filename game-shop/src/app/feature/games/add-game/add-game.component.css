@@ -8,8 +8,8 @@
 .create-page-container,
 .edit-page-container {
     background-color: #372626;
-    width: 800px;
-    height: 600px;
+    width: 900px;
+    height: 700px;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;

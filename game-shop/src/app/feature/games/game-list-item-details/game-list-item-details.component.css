@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .game-img {
