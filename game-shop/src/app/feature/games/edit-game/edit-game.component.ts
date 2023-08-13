@@ -3,7 +3,7 @@ import { FormBuilder, NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameService } from 'src/app/core/game.service';
 import { IGame } from 'src/app/core/interfaces/game';
-import { ReactiveFormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-edit-game',
