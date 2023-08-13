@@ -32,7 +32,7 @@ export class GameListItemDetailsComponent implements OnInit {
       const gameId = params['gameId'];
       this.gameService.loadGameById$(gameId).subscribe(game => {
         this.game = game;
-        
+
         this.likes = this.game.likes.length;
 
         if (this.game.owner === this.currentUser?._id) {
@@ -85,17 +85,20 @@ export class GameListItemDetailsComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       const gameId = params['gameId'];
 
-      this.gameService.buyGame$(gameId).subscribe({
-        next: data => {
-          if (!this.game.boughtGameUsers.includes(this.currentUser?._id)) {
-            this.canBuy = false;
-            this.router.navigate(['/profile'])
+      if (window.confirm('Are you sure you want to buy this game?')) {
+        this.gameService.buyGame$(gameId).subscribe({
+          next: data => {
+            if (!this.game.boughtGameUsers.includes(this.currentUser?._id)) {
+              this.canBuy = false;
+              this.router.navigate(['/profile'])
+            }
+          },
+          error: (err) => {
+            console.log(err);
           }
-        },
-        error: (err) => {
-          console.log(err);
-        }
-      })
+        })
+      }
+
     })
   }
 

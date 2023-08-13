@@ -7,7 +7,7 @@
 
 .create-page-container,
 .edit-page-container {
-    background-color: #372626;
+    background-color: rgba(0,0,0,0.5);
     width: 900px;
     height: 700px;
     position: relative;
@@ -17,16 +17,16 @@
     line-height: 1.5;
     left: 30%;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
-    background-image: url("https://i.pinimg.com/originals/9f/e3/fe/9fe3fe8bcc9f22117d9644ba30a9e26f.jpg")
+    
 }
 
 .create-page-container>.create-page-image>img,
 .edit-page-container>.edit-page-image>img {
-    width: 350px;
-    height: 505px;
+    width: 200px;
+    height: 300px;
     object-fit: cover;
     object-position: center;
-    box-shadow: 2px 2px 6px 4px #9dacf7;
+    box-shadow: 2px 2px 6px 4px #004a35;
 }
 
 .create-page-image,

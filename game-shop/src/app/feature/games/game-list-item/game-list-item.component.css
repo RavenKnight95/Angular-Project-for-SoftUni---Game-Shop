@@ -4,7 +4,7 @@
     padding: 0.5em;
     margin: 5px 5px 5px 5px;
     width: 280px;
-    height: 450px;
+    height: 400px;
     float: left;
     position: relative;
     text-align: center;
@@ -14,11 +14,11 @@
 
 .game-list-item-content {
     font-size: 21px;
-    padding: 1em;
+    
 }
 
 .game-list-item-details-btn {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .btn-details {
